@@ -1,6 +1,6 @@
-package org.main.designPattern.AbstractFactory;
+package org.main.designPattern.SimpleFactory;
 
-public class RaguPasta implements Pasta {
+public class RaguPasta extends Pasta {
 
     @Override
     public void prepare() {

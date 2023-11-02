@@ -1,6 +1,6 @@
-package org.main.designPattern.AbstractFactory;
+package org.main.designPattern.SimpleFactory;
 
-public class OilPasta implements Pasta {
+public class OilPasta extends Pasta {
     @Override
     public void prepare() {
         System.out.println("오일 파스타를 준비중에 있습니다.");

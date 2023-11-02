@@ -1,6 +1,6 @@
-package org.main.designPattern.AbstractFactory;
+package org.main.designPattern.SimpleFactory;
 
-public class CreamPasta implements Pasta {
+public class CreamPasta extends Pasta {
 
     @Override
     public void prepare() {
@@ -10,7 +10,6 @@ public class CreamPasta implements Pasta {
     @Override
     public void cook() {
         System.out.println("크림 파스타를 요리중 입니다.");
-
     }
 
     @Override

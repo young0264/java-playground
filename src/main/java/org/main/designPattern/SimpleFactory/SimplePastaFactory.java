@@ -1,7 +1,6 @@
-package org.main.designPattern.AbstractFactory;
+package org.main.designPattern.SimpleFactory;
 
 public class SimplePastaFactory {
-
 
     public Pasta makePasta(String type) {
         if (type == "cream") {

@@ -1,4 +1,4 @@
-package org.main.designPattern.AbstractFactory;
+package org.main.designPattern.SimpleFactory;
 
 public class PastaStore {
     SimplePastaFactory simplePastaFactory = new SimplePastaFactory();
