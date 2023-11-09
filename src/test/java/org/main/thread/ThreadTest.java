@@ -2,11 +2,15 @@ package org.main.thread;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.main.designPattern.thread.CustomThread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-class Thread {
+class ThreadTest {
+
+
+
 
     @Test
     @DisplayName("ExecutorService, ThreadPoolExecutor를 사용한 Thread Pool 생성 ")
@@ -21,4 +25,12 @@ class Thread {
 //        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor();
     }
 
+    @Test
+    @DisplayName("순서가 제어되지 않는 Thread")
+    void t2() {
+        for (int i = 0; i < 10; i++) {
+            Thread thread = new Thread(new CustomThread());
+            thread.start();
+        }
+    }
 }
