@@ -1,4 +1,4 @@
-package org.main.designPattern.thread;
+package org.main.basic.thread;
 
 public class CustomThread implements Runnable {
 

@@ -2,7 +2,7 @@ package org.main.thread;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.main.designPattern.thread.CustomThread;
+import org.main.basic.thread.CustomThread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

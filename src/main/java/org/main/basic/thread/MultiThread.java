@@ -1,4 +1,4 @@
-package org.main.designPattern.thread;
+package org.main.basic.thread;
 
 /** Thread 클래스를 상속받는 방법 */
 class ThreadWithClass extends Thread {
