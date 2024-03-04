@@ -3,13 +3,10 @@ package org.main.next;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.UncheckedIOException;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class nextTest {
+public class NextTest {
 
     @Test
     public void next는_공백앞까지만_입력을받는다() {
