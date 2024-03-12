@@ -1,4 +1,4 @@
-package org.main.java_performance_tuning_story;
+package org.main.java_performance_tuning_story.ch3;
 
 import java.util.logging.Logger;
 
