@@ -7,9 +7,15 @@ public class InfinitThread extends Thread {
     public void run() {
         while (flag) {
             value++;
+            System.out.println("value : " + value);
             if (value == Integer.MAX_VALUE) {
                 value = Integer.MIN_VALUE;
                 System.out.println("MAX_VALUE 도달 ~!");
+            }
+            try {
+                Thread.sleep(0, 1);
+            } catch (Exception e) {
+                break;
             }
         }
     }
