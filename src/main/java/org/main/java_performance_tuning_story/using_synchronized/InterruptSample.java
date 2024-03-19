@@ -8,5 +8,6 @@ public class InterruptSample {
         System.out.println("isInterrupted = " + infinitThread.isInterrupted());
         infinitThread.interrupt(); // interrupt는 특정 상황에서 동작.
         System.out.println("isInterrupted = " + infinitThread.isInterrupted());
+        infinitThread.setFlag(false);
     }
 }

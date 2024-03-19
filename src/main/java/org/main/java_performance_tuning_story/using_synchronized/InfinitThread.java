@@ -13,4 +13,8 @@ public class InfinitThread extends Thread {
             }
         }
     }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
 }
