@@ -1,4 +1,4 @@
-package org.main.thread;
+package org.main.basic.thread;
 
 public class thread_local {
 

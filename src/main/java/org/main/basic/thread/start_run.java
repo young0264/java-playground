@@ -1,4 +1,4 @@
-package org.main.thread;
+package org.main.basic.thread;
 
 /**
  * https://kim-jong-hyun.tistory.com/101
