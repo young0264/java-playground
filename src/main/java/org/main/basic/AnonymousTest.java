@@ -1,6 +1,10 @@
 package org.main.basic;
 
 class CSuper {
+
+    public CSuper() {
+    }
+
     public int a = 10;
 
     public void method1() {
