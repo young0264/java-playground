@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class ReferenceTypeTest {
 
@@ -50,14 +53,23 @@ public class ReferenceTypeTest {
 
         int sum2 = Arrays.stream(scores).sum();
 
-        Assertions.assertThat(sum).isEqualTo(sum1);
-        Assertions.assertThat(sum1).isEqualTo(sum2);
+        assertThat(sum).isEqualTo(sum1);
+        assertThat(sum1).isEqualTo(sum2);
     }
 
     @Test
     void isSameEnumMemoryAddress() {
         Week friday = Week.FRIDAY;
-        Assertions.assertThat(friday).isSameAs(Week.FRIDAY);
+        assertThat(friday).isSameAs(Week.FRIDAY);
+    }
+
+    @Test
+    void usingEnumMethodTest() {
+        assertThat(Week.MONDAY.name()).isEqualTo("MONDAY");
+        assertThat(Week.MONDAY.ordinal()).isEqualTo(0);
+        assertThat(Week.FRIDAY.compareTo(Week.MONDAY)).isEqualTo(4);
+        assertThat(Week.valueOf("MONDAY")).isEqualTo(Week.MONDAY);
+        assertThat(Week.values().length).isEqualTo(7);
     }
 
     private enum Week{
