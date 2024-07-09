@@ -54,5 +54,15 @@ public class ReferenceTypeTest {
         Assertions.assertThat(sum1).isEqualTo(sum2);
     }
 
+    @Test
+    void isSameEnumMemoryAddress() {
+        Week friday = Week.FRIDAY;
+        Assertions.assertThat(friday).isSameAs(Week.FRIDAY);
+    }
+
+    private enum Week{
+        MONDAY, TUESDAY, WEDNESDAY,
+        THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    }
 
 }
