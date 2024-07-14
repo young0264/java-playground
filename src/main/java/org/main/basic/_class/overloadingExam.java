@@ -14,6 +14,17 @@ public class overloadingExam {
         return result;
     }
 
+    /** 매개변수 이름만 다름 : overloading이 아님 */
+//    double plus(double x2, double y2) {
+//        double result = x2 + y2;
+//        return result;
+//    }
+
+    /** 리턴 타입만 다름 : overloading이 아님 */
+//    String plus(double x, double y) {
+//        double result = x + y;
+//        return "test";
+//    }
 
     public void t1() {
         plus(10, 20.3); // int -> double 로 자동 형변환 되어 double 타입의 plus 메서드 선택
