@@ -10,9 +10,9 @@ import java.awt.*;
 public class ThreadBasicTest {
 
     @Test
-    @DisplayName("main과 worker 같이 실행")
+    @DisplayName("[Runnable 사용]main과 worker 같이 실행")
     void runWithMainAndWorker() {
-        BeepTask beepTask = new BeepTask();
+        Runnable beepTask = new BeepTask();
         Thread thread = new Thread(beepTask);
         thread.start();
 
@@ -26,7 +26,7 @@ public class ThreadBasicTest {
         }
     }
 
-    /** 0.5초마다 beep하는 inner class */
+    /** [Runnable 상속] 0.5초마다 실행하는 inner class */
     public class BeepTask implements Runnable {
         public void run() {
             Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -37,6 +37,42 @@ public class ThreadBasicTest {
                     Thread.sleep(500);
                 } catch (Exception e) {
                     System.out.println("e : "+ e.getMessage());
+                }
+            }
+        }
+    }
+
+
+    @Test
+    @DisplayName("[Thread 하위 클래스]")
+    void runWithMainAndWorkerUnderThreadClass() {
+        Thread thread = new BeepThread();
+        thread.start();
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("띵");
+            try {
+                Thread.sleep(500);
+            } catch (Exception e) {
+
+            }
+        }
+    }
+
+    /**
+     * [Thread 사용]
+     */
+    public class BeepThread extends Thread {
+        @Override
+        public void run() {
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            for (int i = 0; i < 5; i++) {
+//                toolkit.beep();
+                System.out.println("띠잉");
+                try {
+                    Thread.sleep(500);
+                } catch (Exception e) {
+
                 }
             }
         }
