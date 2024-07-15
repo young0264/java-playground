@@ -78,5 +78,33 @@ public class ThreadBasicTest {
         }
     }
 
+    @Test
+    @DisplayName("우선 순위를 통한 스레드 실행")
+    void runThreadUsingPriority() {
+        for (int i = 0; i <= 10; i++) {
+            Thread thread = new CalcThread("thread" + i);
+            if (i != 10) {
+                thread.setPriority(Thread.MIN_PRIORITY);
+            } else {
+                thread.setPriority(Thread.MAX_PRIORITY);
+            }
+            thread.start();
+        }
+    }
+
+    public class CalcThread extends Thread {
+
+        public CalcThread(String name) {
+            setName(name);
+        }
+
+        public void run() {
+            for (int i = 0; i < 2000000000; i++) {
+            }
+            System.out.println(getName());
+        }
+    }
+
+
 
 }
