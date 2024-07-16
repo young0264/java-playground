@@ -81,7 +81,7 @@ public class ThreadBasicTest {
     @Test
     @DisplayName("우선 순위를 통한 스레드 실행")
     void runThreadUsingPriority() {
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             Thread thread = new CalcThread("thread" + i);
             if (i != 10) {
                 thread.setPriority(Thread.MIN_PRIORITY);
@@ -104,7 +104,5 @@ public class ThreadBasicTest {
             System.out.println(getName());
         }
     }
-
-
 
 }
