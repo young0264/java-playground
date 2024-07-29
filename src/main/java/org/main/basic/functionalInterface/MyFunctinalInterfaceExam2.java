@@ -2,7 +2,7 @@ package org.main.basic.functionalInterface;
 
 public class MyFunctinalInterfaceExam2 {
     public static void main(String[] args) {
-        MyFunctionalInerfaceWithInt fi;
+        MyFunctionalInterfaceWithInt fi;
 
         fi = (x) -> {
             int result = x * 5;

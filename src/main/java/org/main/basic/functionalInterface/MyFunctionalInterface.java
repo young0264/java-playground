@@ -1,7 +1,7 @@
 package org.main.basic.functionalInterface;
 
 @FunctionalInterface
-public interface MyFunctionalInerface {
+public interface MyFunctionalInterface {
     void method1();
 
 }

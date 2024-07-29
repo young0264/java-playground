@@ -1,6 +1,6 @@
 package org.main.basic.functionalInterface;
 
 @FunctionalInterface
-public interface MyFunctionalInerfaceWithInt {
+public interface MyFunctionalInterfaceWithInt {
     void method(int n);
 }

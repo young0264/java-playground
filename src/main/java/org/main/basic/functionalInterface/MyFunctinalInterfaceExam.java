@@ -2,7 +2,7 @@ package org.main.basic.functionalInterface;
 
 public class MyFunctinalInterfaceExam {
     public static void main(String[] args) {
-        MyFunctionalInerface fi;
+        MyFunctionalInterface fi;
 
         fi = () -> {
             String str = "method call1";
