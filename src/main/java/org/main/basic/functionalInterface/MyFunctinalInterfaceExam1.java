@@ -1,6 +1,6 @@
 package org.main.basic.functionalInterface;
 
-public class MyFunctinalInterfaceExam {
+public class MyFunctinalInterfaceExam1 {
     public static void main(String[] args) {
         MyFunctionalInterface fi;
 
