@@ -1,4 +1,6 @@
-package org.main.basic.functionalInterface;
+package org.main.basic.functionalInterface.examples;
+
+import org.main.basic.functionalInterface.examples.MyFunctinalInterfaceExam4;
 
 public class UsingLocalVariable {
 

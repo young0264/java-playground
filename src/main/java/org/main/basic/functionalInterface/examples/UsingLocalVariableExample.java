@@ -1,4 +1,4 @@
-package org.main.basic.functionalInterface;
+package org.main.basic.functionalInterface.examples;
 
 public class UsingLocalVariableExample {
     public static void main(String[] args) {

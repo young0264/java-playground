@@ -1,4 +1,4 @@
-package org.main.basic.functionalInterface;
+package org.main.basic.functionalInterface.examples;
 
 @FunctionalInterface
 public interface MyFunctionalInterfaceWithInt {
