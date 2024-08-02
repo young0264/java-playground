@@ -2,6 +2,10 @@ package org.main.basic.functionalInterface.functions;
 
 import java.util.function.*;
 
+/**
+ * 인터페이스 명 : Consumer<T>
+ * 추상메서드 명 : void accept()
+ **/
 public class ConsumerExam {
 
     public static void main(String[] args) {
