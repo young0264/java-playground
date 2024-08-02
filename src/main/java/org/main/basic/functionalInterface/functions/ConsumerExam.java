@@ -5,6 +5,7 @@ import java.util.function.*;
 /**
  * 인터페이스 명 : Consumer<T>
  * 추상메서드 명 : void accept()
+ * API 설명 : 매개 변수를 사용만하고 return하지 않는 형태
  **/
 public class ConsumerExam {
 
