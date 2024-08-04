@@ -2,6 +2,11 @@ package org.main.basic.functionalInterface.functions;
 
 import java.util.function.Predicate;
 
+/**
+ * 인터페이스 명 : Predicate
+ * 추상메서드 명 : boolean test(T t)
+ * API 설명 : 타입을 인자로 받으면 boolean을 return
+ **/
 public class PredicateExam {
     public static void main(String[] args) {
 
