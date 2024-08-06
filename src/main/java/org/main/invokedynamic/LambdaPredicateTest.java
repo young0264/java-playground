@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class LambdaPredicateTest {
+    String tField = "test";
 
     public static void main(String[] args) {
         final int NUM_THREE = 3;
@@ -18,6 +19,11 @@ public class LambdaPredicateTest {
 
         System.out.println("first result : " + firstRes);
         System.out.println("second result : " + secondRes);
-
     }
+
+    public void tMethod() {
+//    public static void tMethod() {
+        this.tField = "10";
+    }
+
 }
