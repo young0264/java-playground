@@ -21,11 +21,18 @@ public class GenericWildcardExam {
         Object[] itemList = new Object[5];
         int index = 0;
 
-        public MyArrayList(Collection<? extends T> items) {
+        public MyArrayList(Collection<? extends T> items) { //범위 제한.
             for (T item : items) {
                 itemList[index++] = item;
             }
         }
+
+        /** 타입 추론이 불가능한 논리적 에러 */
+//        public MyArrayListWithUnboundedWildcard(Collection<?> items) { //범위 제한.
+//            for (T item : items) {
+//                itemList[index++] = item;
+//            }
+//        }
     }
 
     public void test1() {
