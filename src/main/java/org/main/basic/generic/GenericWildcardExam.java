@@ -1,5 +1,6 @@
 package org.main.basic.generic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -25,6 +26,32 @@ public class GenericWildcardExam {
                 itemList[index++] = item;
             }
         }
+    }
+
+    public void test1() {
+        ArrayList<? extends Object> parent = new ArrayList<>();
+        ArrayList<? extends Number> firstChild = new ArrayList<>();
+        ArrayList<? extends Integer> secondChild = new ArrayList<>();
+
+        parent = firstChild; // 제네릭 공변성(업캐스팅)
+        firstChild = (ArrayList<? extends Number>) parent; // 반공변성 (제네릭 다운캐스팅)
+
+        parent= firstChild;
+    }
+
+    public void test2() {
+        Object firstNum = 1; //auto-boxing
+        Number secondNum = 2; //auto-boxing
+        Integer thirdNum = 3; //auto-boxing
+
+        firstNum = secondNum;
+        secondNum = (Number) firstNum; // 다운캐스팅( 상위->하위 명시적)
+        firstNum = secondNum; // 업캐스팅(하위->상위 자동처리, 하위가 상위의 속성을 갖고있기 때문에 안전)
+
+        secondNum = thirdNum;
+        thirdNum = (Integer) secondNum; // 다운캐스팅
+
+
     }
 
 }
