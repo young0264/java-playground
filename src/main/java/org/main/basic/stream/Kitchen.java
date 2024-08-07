@@ -1,6 +1,7 @@
 package org.main.basic.stream;
 
-public class Kitchen {
+//public class Kitchen implements Comparator {
+public class Kitchen implements Comparable<Kitchen> {
     private String type;
     private int capacity;
 
@@ -15,5 +16,10 @@ public class Kitchen {
 
     public int getCapacity() {
         return capacity;
+    }
+
+    @Override
+    public int compareTo(Kitchen o) {
+        return Integer.compare(this.capacity, o.capacity);
     }
 }
