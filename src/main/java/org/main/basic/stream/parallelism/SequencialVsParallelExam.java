@@ -1,4 +1,4 @@
-package org.main.basic.stream;
+package org.main.basic.stream.parallelism;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,5 +1,7 @@
 package org.main.basic.stream;
 
+import org.main.basic.stream.parallelism.Student;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
