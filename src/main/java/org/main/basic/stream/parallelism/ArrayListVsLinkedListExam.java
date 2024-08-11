@@ -29,7 +29,7 @@ public class ArrayListVsLinkedListExam {
             linkedList.add(i);
         }
 
-        //워밍업 -> 캐싱 영향으로 ArrayList가 빠른 경우가 많아짐
+        //워밍업 -> 캐싱 영향으로 ArrayList가 빠른 경우가 많아짐(배열배치, 캐시 효율성증가)
 //        long arrayListListParallel = testParallel(arrayList);
 //        long linkedListParallel = testParallel(linkedList);
 
