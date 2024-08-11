@@ -3,7 +3,7 @@ package org.main.basic.functionalInterface.functions;
 import java.util.function.*;
 
 /**
- * 인터페이스 명 : Function<T, R>
+ * 인터페이스 명 : Function<T, R> ( = T를 R로 매핑)
  * 추상메서드 명 : R apply(T t)
  * API 설명 : 매개값을 받아와서 특정 타입으로 return
  **/

@@ -1,4 +1,8 @@
 package org.main.basic.stream;
+
+import lombok.ToString;
+
+@ToString
 public class Student {
 
     public enum Sex{MALE, FEMALE}
