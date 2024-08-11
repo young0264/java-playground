@@ -23,19 +23,19 @@ public class ArrayListVsLinkedListExam {
         //소스 컬렉션
         List<Integer> arrayList = new ArrayList<Integer>();
         List<Integer> linkedList = new LinkedList<Integer>();
-//        for (int i = 0; i < 100; i++) { // 요소의 갯수가 적을시 LinkedList가 더 빠름
-        for (int i = 0; i < 1000000; i++) { // ArrayList가 더 빠름
+//        for (int i = 0; i < 100; i++) { // 요소의 갯수가 적을시 LinkedList가 더 빠름, 각 요소가 참조값을 가진 node로 존재하기 때문
+        for (int i = 0; i < 1000000; i++) { // ArrayList가 더 빠름,
             arrayList.add(i);
             linkedList.add(i);
         }
 
-        //워밍업
-        long arrayListListParallel = testParallel(arrayList);
-        long linkedListParallel = testParallel(linkedList);
+        //워밍업 -> 캐싱 영향으로 ArrayList가 빠른 경우가 많아짐
+//        long arrayListListParallel = testParallel(arrayList);
+//        long linkedListParallel = testParallel(linkedList);
 
         //병렬 스트림 처리 시간 구하기
-        arrayListListParallel = testParallel(arrayList);
-        linkedListParallel = testParallel(linkedList);
+        long arrayListListParallel = testParallel(arrayList);
+        long linkedListParallel = testParallel(linkedList);
 
         System.out.println("arrayListListParallel : "+ arrayListListParallel);
         System.out.println("linkedListParallel : "+ linkedListParallel);
