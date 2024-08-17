@@ -1,4 +1,4 @@
-package org.main.basic.IO;
+package org.main.basic.IO.systemExam;
 
 import java.io.InputStream;
 
