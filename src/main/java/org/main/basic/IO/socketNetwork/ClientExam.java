@@ -11,7 +11,7 @@ public class ClientExam {
         Socket socket = new Socket("localhost", 5001);
         OutputStream os = socket.getOutputStream();
 
-        String filePath = "/Users/young/project/java-playground/file6.txt";
+        String filePath = "/Users/young/study/file1.txt";
         File file = new File(filePath);
 
         String fileName = file.getName();
@@ -24,6 +24,7 @@ public class ClientExam {
         byte[] bytes = new byte[1000];
         int readByteCount = -1;
         while((readByteCount=fis.read(bytes))!=-1) {
+            System.out.println("readByteCount : " + readByteCount);
             os.write(bytes, 0, readByteCount);
         }
 

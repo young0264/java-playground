@@ -26,8 +26,8 @@ public class ServerExam {
                 String fileName = new String(bytes, 0, 100, "UTF-8");
                 fileName = fileName.trim();
 
-                System.out.println("[fileName]" + fileName);
-                FileOutputStream fos = new FileOutputStream("C:/Temp/" + fileName);
+                System.out.println("[fileName]::" + fileName);
+                FileOutputStream fos = new FileOutputStream("/Users/young/study/subPackage/" + fileName);
                 while((readByteCount=is.read(bytes))!=-1) {
                     fos.write(bytes, 0, readByteCount);
                 }
@@ -43,6 +43,6 @@ public class ServerExam {
         }
 
         serverSocket.close();
-        System.out.println("[fileName]]");
+        System.out.println("[fileName]");
     }
 }
