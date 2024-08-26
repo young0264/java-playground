@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.channels.AsynchronousServerSocketChannel;
+import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.Selector;
 
 public class ServerExam {
@@ -18,25 +20,26 @@ public class ServerExam {
             try {
                 Socket socket = serverSocket.accept(); // 클라이언트 연결 수락
 
-                InputStream is = socket.getInputStream();
+                InputStream inputStream = socket.getInputStream();
 
                 byte[] bytes = new byte[1000];
                 int readByteCount = -1;
 
-                is.read(bytes, 0, 100);
+                inputStream.read(bytes, 0, 100);
                 String fileName = new String(bytes, 0, 100, "UTF-8");
                 fileName = fileName.trim();
 
                 System.out.println("[fileName]::" + fileName);
-                FileOutputStream fos = new FileOutputStream("/Users/young/study/subPackage/" + fileName);
-                while((readByteCount=is.read(bytes))!=-1) {
-                    fos.write(bytes, 0, readByteCount);
+                FileOutputStream fileOutputStream = new FileOutputStream("/Users/young/study/subPackage/" + fileName);
+
+                while((readByteCount=inputStream.read(bytes))!=-1) {
+                    fileOutputStream.write(bytes, 0, readByteCount);
                 }
-                fos.flush();
+                fileOutputStream.flush();
                 System.out.println("[fileName]");
 
-                fos.close();
-                is.close();
+                fileOutputStream.close();
+                inputStream.close();
                 socket.close();
             } catch(Exception e) {
                 break;
