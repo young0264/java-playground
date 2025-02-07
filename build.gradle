@@ -20,21 +20,19 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-log4j2'
     implementation  'org.springframework.boot:spring-boot-starter-logging'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     //lombok 라이브러리 추가 시작
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
+
     //lombok 라이브러리 추가 끝
 
     /** 이하 테스트 */
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-//    testImplementation 'org.projectlombok:lombok:1.18.22'
-//    testImplementation 'org.springframework.boot:spring-boot-starter-logging'
-//    testAnnotationProcessor 'org.projectlombok:lombok' //추가
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 configurations {
